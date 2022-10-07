@@ -6,7 +6,7 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="widh-device-widh,initial-scale-1.0"/>
 
-	<!-- SEO-->
+		 <!-- SEO-->
 		<title>Costea George Alin -Link-uri utile</title>
 		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -32,12 +32,12 @@
 
 		<!-- design -->
 		<link rel="stylesheet" href="style.css" />
-		<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x2.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x6.png" />
 		<link rel="icon" type="image/x-icon" href="./favicon.ico" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="./favicon.svg"/>
 		<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-		<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#4f6df5" />
+		<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#ffffff" />
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<link rel="manifest" href="./my.webmanifest" />
 		<meta name="apple-mobile-web-app-title" content="Costea George Alin Link-uri "/>
@@ -56,12 +56,26 @@
 		<link rel="preload" href="./Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin />
 </head>
 
-<body itemscope="" itemtype="https://schema.org/ProfilePage">
-	<div class="Container"itemscope="" itemtype="https://schema.org/Person">
+<body itemscope itemtype="https://schema.org/ProfilePage">
+	<div class="Container" itemscope itemtype="https://schema.org/Person">
 		<header>
-			<img class="Avatar" src="costea-alin.jpg" width="300" height="300"
-				alt="Imaigne de profil pentru costeageorgealin" itemprop="image">
-			<h1 class="Titlulpaginii">
+			<picture class="Avatar">
+				<source type="image/webp" srcset="
+				costea-alin-112.webp 112w,
+				costea-alin-192.webp 192w
+			    "sizes="
+				(max-width: 929px) 112px,
+				(min-width: 930px) clamp(130px, 14vw, 12rem)
+				" />
+				<img srcset="
+				costea-alin-112.jpg 112w,
+				costea-alin-192.jpg 192w
+				" sizes="
+				(max-width: 929px) 112px,
+				(min-width: 930px) clamp(130px, 14vw, 12rem)
+				" src="./costea-alin-112.jpg" alt="Imagine de profil pentru Costea George Alin" loading="lazy" decoding="async" width="112" height="112" itemprop="image" />
+			</picture>
+			<h1 class="TitlulPaginii">
 				<strong itemprop="name">Costea George Alin</strong>
 			</h1>
 			<h2 class="SubtitlulPaginii" itemprop="jobTitle">Web developer</h2>
@@ -115,12 +129,13 @@
 					<a href="https://ro.pinterest.com/costeageorgealin/" class="ListaLink"
 						title="Vezi profilul meu de Pinterest" target="_blank" rel="noreferrer noopener">
 						<h2 class="ListaTitlu">💡 Pinterest</h2>
-						<p class="ListaText" itemprop="url">https://ro.pinterest.com/costeageorgealin/</p>
+						<p class="ListaText" itemprop="url">https://ro.pinterest.com/costeageorgealin</p>
 					</a>
 				</li>
 			</ul>
 		</main>
 	</div>
+	<script defer src="script.js"></script>
 </body>
 
 </html>
