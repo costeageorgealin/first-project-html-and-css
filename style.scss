@@ -20,30 +20,74 @@ html {background: black url("background.jpg") center center no-repeat;background
 body { display: block; min-height: 100vh; margin: 0; text-rendering: optimizeSpeed;
 	@media (min-width: 500px) { display: grid; place-items: center; }
 }
+
 img, picture { max-width: 100%; display: block; }
 
 input, button, textarea, select { font: inherit; }
 
 strong { font-weight: 900; }
-.Container {width: 90%;margin: 2vh auto;background: #5D6061;padding: 2rem;font-size: clamp(1rem, 2vw, 2rem);line-height: 1.5em;
-@media(min-width:300px)  {margin: 2vh;padding: 2rem;border-radius: 2rem;}
-@media(min-width:500px)  {margin: 2vh;padding: 2rem;border-radius: 2rem;}
+
+.Container {background: #5D6061;padding: 1rem;font-size: clamp(1rem, 2vw, 2rem);line-height: 1.5em;
+	@media(min-width:300px)  {margin: 2vh;padding: 2rem;border-radius: 2rem;}
+	@media(min-width:500px)  {margin: 7vw;padding: 2rem;border-radius: 2rem;}
+}
+	header{ display: block;}
+
+		.Avatar {display: block; width:112px; margin:0 1em 1em 0;
+			@media (min-width: 380px) { float: left; }
+			@media (min-width: 930px) { width: clamp(130px, 14vw, 12rem);}
+		}
+
+	 		.Avatar img { display: block; width:100%; height:auto;border-radius:50%;}
+		.TitlulPaginii { display: block; margin: 0; font-size: clamp(2rem, 6vw, 4rem); line-height: 1em;}
+		.SubtitlulPaginii { display:block; margin:0; font-size: clamp(1rem, 2vw, 2rem); font-weight:400; line-height:1em;opacity:0.5}
+		.DescrierePrincipala { display:block;margin:0.5em 0 1.5em;
+			@media (min-width:500px) {margin-bottom:0.5em;}}
+
+		main { clear: both;}
+			.ListaLinkuri { display: block; margin: 0; padding: 0; border-top: 1px solid #fff;
+				@media (min-width: 1800px) { display: grid; grid-template-columns: 1fr 1fr; }
+		}
+				.ListaItem { display: block; margin: 0; padding: 0; border-bottom: 1px solid #fff; }
+					.ListaLink { display: block; padding: 0.5em; color: #fff; text-decoration: none;
+						&:hover { background: white; color: black; }
+				}
+						.ListaTitlu, .ListaText { display: block; margin: 0; padding: 0; font-size: 1em; line-height: 1.5em; font-weight: 900; }
+						.ListaText { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 400; }
+
+	@media (prefers-reduced-motion: reduce) {
+	html:focus-within { scroll-behavior: auto; }
+	*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important;scroll-behavior: auto !important; }
 }
 
-.Avatar {display: block; width: 112px; height: auto; border-radius: 50%;margin:0 1em 1em 0;
-	@media (min-width: 380px) { float: left; }
-	@media (min-width: 930px) { width: clamp(130px, 14vw, 12rem);}}
+@media print {
 
-.Titlulpaginii {display: block;margin: 0;font-size: clamp(2rem, 6vw, 4rem);line-height: 1em;}
-.SubtitlulPaginii {display:block;margin:0;font-size:clamp(2rem, 2vw, 4rem);font-weight:100;line-height:1em;opacity:0.5;}
+	* { background-image: none; background: white; color: black; }
 
-.DescrierePrincipala {display:block;margin:0.5em 0 1.5em;
-	@media (min-width:500px) {margin-bottom:0.5em;}}
+	@page { margin: 2cm; }
+	@page :first { margin-top: 3cm; }
+	@page :left { margin-right: 3cm; }
+	@page :right { margin-left: 3cm; }
+	
+	html { background: white; font-size: 12pt; line-height: 1.5em; }
 
-.main {clear: both;}
-  .ListaLinkuri {display: block;margin: 0;padding: 0;border-top: 1px solid #fff;}
-	   .ListaItem {display:block ;margin:0 ;padding:0 ;border-bottom: 1px solid #fff;}
-			.ListaLink {display: block;padding: 0.5em;color: #fff;text-decoration:none;}
-			.ListaLink:hover {background:white;color: black;}
-		       .ListaTitlu .ListaText {display:block;margin:0;padding:0;font-size:1em;line-height:1.5em;}
-		        .ListaText {white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+	a:link, a:visited { color: #00f; background: transparent; font-weight: bold; }
+	a:not([href^="http"]):after { content: " (" attr(href) ")"; font-size: 0.9em; }
+	a[href^="/"]:after { content: " (https://costeageorgealin.github.io/first-project-html-and-css/" attr(href) ") "; }
+	/*a:not(:local-link):after { content: " (" attr(href) ")»"; }*/
+	a:after > img { content: ""; }
+	
+	body::after { content: "Copyright © Costea George Alin, toate drepturile rezervate."; display: block; text-align: center; }
+	
+	.Container { background: transparent; margin: 0; padding: 0; }
+	
+	h1, h2, h3, h4, h5, h6 { page-break-after: avoid; page-break-inside: avoid }
+	h1 + h2 { page-break-before: avoid; }
+	
+	table, pre, img, svg, blockquote, a { break-inside: avoid; }
+	
+	ul, ol, dl { page-break-before: avoid; }
+	
+	.TitlulPaginii { padding-top: 0.5em; }
+	.ListaText { display: inline; color: #00f; white-space: normal; text-decoration: underline; }
+	}
