@@ -1,28 +1,27 @@
 {
-	"name": "Costea George Alin Links",
-	"short_name": "Costea George Alin",
-	"description":"Toate link-urile mele si
-	profilurile de social media unde ma puteti gasii si pe care sunt activ."
-	,"icons": [
+	"name": "Costea Gorge Alin Links",
+	"short_name": "CosteaGeorgeAlin.ro",
+	"description": "Toate link-urile mele. Profilurile de social media ",
+	"icons": [
 		{
-			"src":"favicon-192.png",
-			"type":"image/png",
-			"size":"192x192"
+			"src": "./favicon-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
 		},
 		{
 			"src": "./favicon-192-maskable.png",
-			"sizes": "592x592",
+			"sizes": "192x192",
 			"type": "image/png",
 			"purpose": "any maskable"
 		},
 		{
 			"src": "./favicon-512.png",
-			"sizes": "512x512",
-			"type": "image/png"
+			"type": "image/png",
+			"sizes": "512x512"
 		}
 	],
-	"start_url":"./index.html",
-	"theme_color": "#ffffff",
-	"background_color": "#ffffff",
-	"display": "standalone"
+	"start_url": "./index.html",
+	"display": "fullscreen",
+	"theme_color": "#B12A34",
+	"background_color": "#B12A34"
 }
