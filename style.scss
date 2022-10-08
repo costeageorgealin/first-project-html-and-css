@@ -12,7 +12,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html {background: black url("background.jpg") center center no-repeat;background-size: cover;color: white;font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5em; }
+html {background: black url("background.webp") center center no-repeat;background-size: cover;color: white;font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5em; }
 @supports (font-variation-settings: normal) {
 	html { font-family: 'Inter var', Helvetica, Arial, sans-serif; } 
 }
