@@ -11,7 +11,7 @@
 		},
 		{
 			"src": "./favicon-192-maskable.png",
-			"sizes": "192x192",
+			"sizes": "592x592",
 			"type": "image/png",
 			"purpose": "any maskable"
 		},
